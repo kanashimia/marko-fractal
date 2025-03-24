@@ -1,0 +1,52 @@
+{
+  "name": "marko-fractal",
+  "description": "Out of order streamed Gosper Curve in Marko",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@marko/runtime-tags": "^0.3.63",
+    "@marko/vite": "^5.1.0",
+    "marko": "^6.0.0-next"
+  },
+  "devDependencies": {
+    "@marko/run": "0.6.1"
+  },
+  "overrides": {
+    "@marko/compiler": {
+      "@babel/generator": "7.26",
+      "@babel/parser": "7.26",
+      "@babel/plugin-syntax-typescript": "7.25.9",
+      "@babel/plugin-transform-modules-commonjs": "7.26.3",
+      "@babel/plugin-transform-typescript": "7.26",
+      "@babel/runtime": "7.26",
+      "@babel/traverse": "7.26",
+      "@babel/types": "7.26"
+    },
+    "@marko/run": {
+      "marko": "^6.0.0-next"
+    }
+  },
+  "main": "dist/index.mjs",
+  "scripts": {
+    "dev": "marko-run",
+    "build": "marko-run build",
+    "preview": "marko-run preview",
+    "start": "node --enable-source-maps ./dist/index.mjs"
+  },
+  "pnpm": {
+    "overrides": {
+      "@babel/generator": "7.26",
+      "@babel/parser": "7.26",
+      "@babel/plugin-syntax-typescript": "7.25.9",
+      "@babel/plugin-transform-modules-commonjs": "7.26.3",
+      "@babel/plugin-transform-typescript": "7.26",
+      "@babel/runtime": "7.26",
+      "@babel/traverse": "7.26",
+      "@babel/types": "7.26"
+    },
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  }
+}

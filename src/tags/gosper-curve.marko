@@ -1,0 +1,93 @@
+export type Input = {
+  level?: number;
+  pos?: number;
+}
+
+const /level = input.level ?? 0;
+const /pos = input.pos ?? 0;
+const /maxPos = (7 ** level - 1); 
+
+static async function sleep(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+// try to increase the limit if you are brave enough
+const /maxLevel = 4;
+const /isOutOfOrder = true;
+const /delayMs = 1000;
+
+if = (level < maxLevel)
+  for |i| from=0 to=6
+    b/el
+      script --
+        el().setAttribute("style", `--i: ${pos / maxPos}`);
+      try
+        await = sleep(delayMs)
+          gosper-curve pos=(i + 7 * pos) level=(level+1)
+        if = isOutOfOrder
+          @placeholder --
+            ${""}
+
+style --
+  body {
+    margin: 0;
+    padding: 0;
+    background: black;
+    overflow: hidden;
+
+    display: grid;
+    place-items: center;
+  }
+  main {
+    --width: 50vmin;
+    width: calc(82vmin + var(--width));
+    height: var(--width);
+    margin: 78vmin 10vmin 12vmin;
+    border-radius: 4vmin;
+    position: relative;
+    top: calc(-1 * var(--width) / 2);
+    left: calc(-1 * var(--width) / 2);
+  }
+  b:not(:has(> b)) {
+    visibility: visible;
+  }
+  b {
+    background-color: hsl(
+      calc(
+        var(--i, 0.5) * 360
+      )
+      100%
+      50%
+    );
+  }
+  b {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: var(--width);
+    transform-origin: calc(var(--width) / 2) calc(var(--width) / 2);
+  }
+  b:nth-child(1) {
+    transform: scale(0.3789) rotate(19deg);
+  }
+  b:nth-child(2) {
+    transform: scale(0.3789) rotate(-11deg) translateX(142vmin) rotate(150deg);
+  }
+  b:nth-child(3) {
+    transform: scale(0.3789) rotate(-41deg) translateX(82vmin) rotate(60deg);
+  }
+  b:nth-child(4) {
+    transform: scale(0.3789) rotate(-41deg) translateX(82vmin) rotate(-60deg);
+  }
+  b:nth-child(5) {
+    transform: scale(0.3789) rotate(-71deg) translateX(142vmin) rotate(90deg);
+  }
+  b:nth-child(6) {
+    transform: scale(0.3789) rotate(-41deg) translateX(164vmin) rotate(60deg);
+  }
+  b:nth-child(7) {
+    transform: scale(0.3789) rotate(0deg) translateX(216vmin) rotate(-100deg);
+  }
