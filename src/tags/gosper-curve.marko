@@ -20,9 +20,9 @@ if = (level < maxLevel)
   const /j = pos % 7
   for |y| from=0 to=6
     const /i = (j == 1 || j == 2 || j == 6) ? 6 - y : y
-    b/el
-      script --
-        el().setAttribute("style", `--i: ${pos / maxPos}`);
+    b // /el
+      // script --
+      //   el().setAttribute("style", `--i: ${pos / maxPos}`);
       try
         await = sleep(delayMs)
           gosper-curve pos=(i + 7 * pos) level=(level+1)
