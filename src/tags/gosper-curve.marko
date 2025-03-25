@@ -17,7 +17,9 @@ const /isOutOfOrder = true;
 const /delayMs = 1000;
 
 if = (level < maxLevel)
-  for |i| from=0 to=6
+  const /j = pos % 7
+  for |y| from=0 to=6
+    const /i = (j == 1 || j == 2 || j == 6) ? 6 - y : y
     b/el
       script --
         el().setAttribute("style", `--i: ${pos / maxPos}`);
@@ -89,5 +91,5 @@ style --
     transform: scale(0.3789) rotate(-41deg) translateX(164vmin) rotate(60deg);
   }
   b:nth-child(7) {
-    transform: scale(0.3789) rotate(0deg) translateX(216vmin) rotate(-100deg);
+    transform: scale(0.3789) rotate(0deg) translateX(217vmin) rotate(259.3deg);
   }
